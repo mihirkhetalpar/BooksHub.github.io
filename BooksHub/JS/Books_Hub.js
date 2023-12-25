@@ -6,6 +6,17 @@ setTimeout(function() {
 loader.style.display = "none";
    }, 2000); 
 });
+
+                              // Detect scroll events and update the width of the scroll indicator
+window.addEventListener('scroll', function() {
+  const scrollIndicator = document.querySelector('.scroll-indicator');
+  const scrollPosition = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const bodyHeight = document.body.scrollHeight - windowHeight;
+  const scrolled = (scrollPosition / bodyHeight) * 100;
+
+  scrollIndicator.style.width = scrolled + '%';
+});
                                                                                                                                            
                                                     // Banner Image Slider
 const slides = document.querySelectorAll(".slide");
