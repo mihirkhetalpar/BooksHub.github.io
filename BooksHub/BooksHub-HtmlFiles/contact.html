@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT FORM</title>
+    <link rel="shortcut icon" href="../3DImg/SiteLogo.svg" type="image/x-icon"/>
+    <link rel="stylesheet" href="Books_Hub.css"/>
+</head>
+<body>
+
+     <!-- PRELOADER -->
+
+     <div id="preloader">
+    </div>
+
+  <div class="navbar">
+    <div id="logo">
+      <a href="../MainWebPage/index.html">
+        <img src="../3DImg/SiteLogo.svg" alt="navlog"/>
+      </a>
+    </div>
+    <ul id="navLinks">
+      <li class="button">
+        <a href="../MainWebPage/index.html" target="_blank">
+          <span class="actual-text">&nbsp;home&nbsp;</span>
+          <span class="hover-text">&nbsp;home&nbsp;</span>
+        </a>
+      </li>
+      <li class="button">
+        <a href="../MainWebPage/books.html" target="_blank">
+          <span class="actual-text">&nbsp;books&nbsp;</span>
+          <span class="hover-text">&nbsp;books&nbsp;</span>
+        </a>
+      </li>
+      <li class="button">
+        <a href="../MainWebPage/contact.html">
+          <span class="actual-text">&nbsp;contact&nbsp;</span>
+          <span class="hover-text">&nbsp;contact&nbsp;</span>
+        </a>
+      </li>
+      <li class="button">
+        <a href="../MainWebPage/about.html" target="_blank">
+          <span class="actual-text">&nbsp;about&nbsp;</span>
+          <span class="hover-text">&nbsp;about&nbsp;</span>
+        </a>
+      </li>
+      <li class="button">
+        <a href="../MainWebPage/donatetion.html" target="_blank">
+          <span class="actual-text">&nbsp;Donate&nbsp;</span>
+          <span class="hover-text">&nbsp;Donate&nbsp;</span>
+        </a>
+      </li>
+    </ul>
+    <a href="https://forms.gle/7HaYL5PqKcEMPyv6A" target="_blank" class="E-BookSub">Submit Your E-Book</a>
+  </div>
+
+    <img src="../3DImg/contact.png" id="contactbackimg">          
+    <div class="contactglass"></div>                                               
+ <h1 class="contaxt">Contact Us</h1>
+ <form   action="https://formspree.io/f/xrgwwner" method="POST" enctype="multipart/form-data">
+     <input type="text" id="fname" name="First Name" placeholder="Joy" required><br>
+     <input type="text" id="lname" name="Last Name" placeholder="D." required><br>
+     <input type="text" id="email" name="Email" placeholder="Example123@gmail.com" required><br>
+     <textarea id="message" name="Message" rows="5" cols="50" placeholder="Type Your Message Here..." required></textarea><br>
+  
+ <select name="Continent" required>
+ <option disabled selected value="">Select Continent</option>    
+ <option>AUSTRALIA</option>
+ <option>BRAZIL</option>
+ <option>CHINA</option>
+ <option>COLOMBIA</option>
+ <option>DENMARK</option>
+ <option>EGYPT</option>
+ <option>FRANCE</option>
+ <option>GERMANY</option>
+ <option>HUNGARY</option>
+ <option>INDIA</option>
+ <option>JAPAN</option>
+ <option>KUWAIT</option>
+ <option>LIBYA</option>
+ <option>MALDIVES</option>
+ <option>NEPAL</option>
+ <option>PHILIPPINES</option>
+ <option>QATAR</option>
+ <option>RUSSIA</option>
+ <option>SRI LANKA</option>
+ <option>THAILAND</option>
+ <option>UKRAINE</option>
+ <option>VIETNAM</option>
+ <option>YEMEN</option>
+ <option>ZIMBABWE</option>
+ <option>OTHER</option>
+ </select>
+ <button class="Sub-button" type="submit">Send</button>
+ </form>
+
+ <footer>
+    <div class="footer-bottom">
+      &copy; 2024 BooksHub.com | Created by Mihir K.
+    </div>
+  </footer>
+
+  <script src="Books_Hub.js" defer></script>
+</body>
+</html>
