@@ -1049,7 +1049,7 @@ select {
   top: 32px;
   border: 5px solid red;
   border-radius: 200px;
-  background: url(../3DImg/Polygon\ Luminary.svg);
+  background: url(../CSS/Polygon\ Luminary.svg);
 }
 
 #typewriter1 {
@@ -1270,7 +1270,7 @@ select {
   top: 32px;
   border: 5px solid red;
   border-radius: 200px;
-  background: url(../3DImg/Icon\ Grid.svg);
+  background: url(../CSS/Icon\ Grid.svg);
 }
 
 .contrimg3 {
@@ -1428,7 +1428,7 @@ select {
   top: 32px;
   border: 5px solid red;
   border-radius: 200px;
-  background: url(../3DImg/Contour\ Line.svg);
+  background: url(../CSS/Contour\ Line.svg);
 }
 
 .contrimg5 {
