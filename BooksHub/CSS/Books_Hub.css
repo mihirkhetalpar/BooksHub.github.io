@@ -1600,7 +1600,7 @@ select {
 }
 
 .donationbackground {
-  background: url(../3DImg/donationbackImg.png);
+  background: url(../CSS/donationbackImg.png);
   display: flex;
   position: absolute;
   justify-content: center;
