@@ -1,0 +1,497 @@
+body{
+  padding: 0px;
+  margin: 0px;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+}
+
+#BackImg {
+  position: fixed;
+  top: 0;
+  left: -10px;
+  width: 1545px;
+  height: 760px;
+  object-fit: fill;
+  filter: brightness(0.5);
+}
+
+body {
+  --sb-track-color: #ff0092;
+  --sb-thumb-color: #00fffe;
+  --sb-size: 10px;
+  scrollbar-color: var(--sb-thumb-color) 
+                   var(--sb-track-color);                 
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size) 
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 10px;
+  border: 3px solid #f400ff;
+}
+
+#preloader {
+  background: black url(../MainWebPage/preloader.gif) no-repeat center center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+}
+
+.book-grid {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(5, 1fr);
+  height: 0px;
+  top: 10px;
+  width: 0px;
+  column-gap: 80px;
+  row-gap: 65px;
+}
+
+.book-gridcommon5{
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(5, 1fr);
+  height: 0px;
+  top: 10px;
+  left: 25px;
+  width: 0px;
+  column-gap: 70px;
+}
+
+.book-gridcommon10{
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(5, 1fr);
+  height: 0px;
+  top: 10px;
+  left: 25px;
+  width: 0px;
+  column-gap: 75px;
+  row-gap: 55px;
+}
+
+.book-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  perspective: 1300px;
+  height: 320px;
+  width: 225px;
+  top: 20px;
+  left: 20px;
+}
+
+.book-common {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  perspective: 1300px;
+  height: 320px;
+  width: 225px;
+  top: 20px;
+  left: 20px;
+}
+
+@keyframes initAnimation {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(-45deg);
+  }
+}
+
+.book {
+  width: 250px;
+  height: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateY(-45deg);
+  transition: 1s ease;
+  animation: 1s ease 0s 1 initAnimation;
+}
+
+.book-container:hover .book, 
+.book-container:focus .book {
+  transform: rotateY(0deg);
+}
+
+.book-common:hover .book, 
+.book-common:focus .book {
+  transform: rotateY(0deg);
+}
+
+.book > :first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: red;
+  width: 250px;
+  height: 300px;
+  transform: translateZ(15px);
+  background-color: #01060f;
+  border-radius: 0 5px 5px 0;
+  box-shadow: 5px 5px 20px #666;
+}
+
+.book::before {
+  position: absolute;
+  content: ' ';
+  background-color: blue;
+  left: 0;
+  top: 1px;
+  width: 28px;
+  height: 298px;
+  transform: translateX(234px) rotateY(90deg);
+  background: linear-gradient(90deg, 
+    #fff 0%,
+    #f9f9f9 5%,
+    #fff 10%,
+    #f9f9f9 15%,
+    #fff 20%,
+    #f9f9f9 25%,
+    #fff 30%,
+    #f9f9f9 35%,
+    #fff 40%,
+    #f9f9f9 45%,
+    #fff 50%,
+    #f9f9f9 55%,
+    #fff 60%,
+    #f9f9f9 65%,
+    #fff 70%,
+    #f9f9f9 75%,
+    #fff 80%,
+    #f9f9f9 85%,
+    #fff 90%,
+    #f9f9f9 95%,
+    #fff 100%
+    );
+}
+
+.book::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: ' ';
+  width: 250px;
+  height: 300px;
+  transform: translateZ(-15px);
+  background-color: #01060f;
+  border-radius: 0 5px 5px 0;
+  box-shadow: -10px 0 50px 10px #666;
+}
+
+.book-grid:hover .book-container{
+  opacity: 0.5;
+  filter: blur(1px);
+}
+
+.book-grid .book-container:hover{
+  opacity: 1;
+  filter: blur(0px);
+}
+
+.book-gridcommon5:hover .book-common{
+  opacity: 0.5;
+  filter: blur(1px);
+}
+
+.book-gridcommon5 .book-common:hover{
+  opacity: 1;
+  filter: blur(0px);
+}
+
+.book-gridcommon10:hover .book-common{
+  opacity: 0.5;
+  filter: blur(1px);
+}
+
+.book-gridcommon10 .book-common:hover{
+  opacity: 1;
+  filter: blur(0px);
+}
+
+.details {
+  position: absolute;
+  top: 20px;
+  left: 5px;
+  width: 240px;
+  height: 280px;
+  background-color: rgba(0 0 0 / 65%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease, visibility 1s ease;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  color: white;
+  font-family: system-ui;
+  font-style: italic;
+  font-weight: 600;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.book-container:hover .details {
+  opacity: 1;
+  visibility: visible;
+}
+
+.book-common:hover .details {
+  opacity: 1;
+  visibility: visible;
+}
+
+.details {
+  --sb-track-color: #ff0092;
+  --sb-thumb-color: #00fffe;
+  --sb-size: 10px;
+  scrollbar-color: var(--sb-thumb-color) 
+                   var(--sb-track-color);                 
+}
+
+.details::-webkit-scrollbar {
+  width: var(--sb-size) 
+}
+
+.details::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 10px;
+}
+
+.details::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 10px;
+  border: 3px solid #f400ff;
+}
+
+.authors{
+  position: relative;
+  top: -25px;
+  left: -10px;
+  font-size: 20px;
+}
+
+.authors span{
+  font-size: 25px;
+  color: magenta;
+}
+
+.genres{
+  position: relative;
+  top: -35px;
+  left: -10px;
+  font-size: 20px;
+}
+
+.genres span{
+  font-size: 25px;
+  color: orange;
+}
+
+.publisers{
+  position: relative;
+  top: -45px;
+  left: -10px;
+  font-size: 20px;
+}
+
+.publisers span{
+  font-size: 25px;
+  color: yellow;
+}
+
+.summarys{
+  display: flex;
+  position: relative;
+  top: -70px;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.summaryText{
+  position: relative;
+  top: -40px;
+}
+
+.details h2{
+  display: flex;
+  transform: translate(45px, -20px);
+  font-size: 25px;
+  padding: 0px;
+  margin: 0px;
+  color: aqua;
+  text-align: center;
+}
+
+.LimitedBooks5{
+  display: flex;
+  position: absolute;
+  top: 300px;
+  padding: 85px;
+  margin: 0px;
+  color: white;
+  font-family: system-ui;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 37px;
+  text-transform: capitalize;
+}
+
+.UserContribution5{
+ display: flex;
+ position: absolute;
+ text-transform: capitalize;
+ top: 655px;
+}
+
+.UserContribution5 h1{
+  position: absolute;
+  transform: translate(345px, -45px);
+  font-family: sans-serif;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 60px;
+  filter: drop-shadow(0px 0px 5px cyan);
+  -webkit-text-stroke: 2px white;
+  color: cyan;
+}
+
+.UserContribution5 h2{
+  position: relative;
+  padding: 100px;
+  margin: 0px;
+  color: white;
+  font-family: cursive;
+  font-size: 30px;
+  font-style: italic;
+}
+
+.LimitedBooks10{
+  display: flex;
+  position: absolute;
+  top: 695px;
+  padding: 85px;
+  margin: 0px;
+  color: white;
+  font-family: system-ui;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 37px;
+  text-transform: capitalize;
+}
+
+.UserContribution10{
+ display: flex;
+ position: absolute;
+ text-transform: capitalize;
+ top: 1050px;
+}
+
+.UserContribution10 h1{
+  position: absolute;
+  transform: translate(345px, -45px);
+  font-family: sans-serif;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 60px;
+  filter: drop-shadow(0px 0px 5px cyan);
+  -webkit-text-stroke: 2px white;
+  color: cyan;
+}
+
+.UserContribution10 h2{
+  position: relative;
+  padding: 100px;
+  margin: 0px;
+  color: white;
+  font-family: cursive;
+  font-size: 30px;
+  font-style: italic;
+}
+
+
+/* POETRY BOOKS */
+
+.TTNBC{
+  position: relative;
+  left: -40px;
+  font-size: 20px;
+}
+
+/* CODING BOOKS */
+
+.html{
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+
+.css{
+ position: relative;
+ top: 10px;
+ left: 25px;
+}
+
+.Cprog{
+ position: relative;
+ top: 10px;
+ left: -35px;
+}
+
+.cppp{
+ position: relative;
+ top: 10px;
+ left: 25px;
+}
+
+.csharplang{
+ position: relative;
+ top: 10px;
+ left: 30px;
+}
+
+.dart{
+ position: relative;
+ top: 10px;
+ left: 30px;
+}
+
+.sql{
+ position: relative;
+ top: 10px;
+ left: 30px;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  top: 97%;
+  width: 100%;
+}
+
+.footer-bottom {
+  font-size: 15px;
+  font-style: italic;
+  color: white;
+  padding: 0px;
+  margin: 0px;
+  background-color: black;
+  width: 100%;
+  text-align: center;
+}
