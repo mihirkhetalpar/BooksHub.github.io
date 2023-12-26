@@ -6,6 +6,10 @@ body{
   background-color: black;
 }
 
+body::-webkit-scrollbar {
+  width: 0; /* Hide scrollbar on Chrome/Safari */
+}
+
 #preloader {
   background: black url(../CSS/preloader.gif) no-repeat center center;
   height: 100%;
