@@ -2,10 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Books Hub</title>
     <link rel="shortcut icon" href="../BooksHub.github.io/Images/SiteLogo.svg" type="image/x-icon"/>
     <link rel="stylesheet" href="../BooksHub.github.io/BooksHub/CSS/Books_Hub.css"/>
+    <!-- <link rel="stylesheet" media="screen and (max-width: 400px)" href="../BooksHub.github.io/BooksHub/CSS/HubPhone.css"> -->
   </head>
   <body>
        
@@ -17,46 +19,25 @@
     <div class="scroll-indicator"></div> 
 
     <!-- NavBar -->
-    <div class="navbar">
-      <div id="logo">
+    <nav class="navbar">
+      <div class="logo">
         <a href="../BooksHub.github.io/index.html">
           <img src="../BooksHub.github.io/Images/SiteLogo.svg" alt="navlog"/>
         </a>
       </div>
-      <ul id="navLinks">
-        <li class="button">
-          <a href="../BooksHub.github.io/index.html">
-            <span class="actual-text">&nbsp;home&nbsp;</span>
-            <span class="hover-text">&nbsp;home&nbsp;</span>
-          </a>
-        </li>
-        <li class="button">
-          <a href="../BooksHub.github.io/BooksHub-HtmlFiles/books.html" target="_blank">
-            <span class="actual-text">&nbsp;books&nbsp;</span>
-            <span class="hover-text">&nbsp;books&nbsp;</span>
-          </a>
-        </li>
-        <li class="button">
-          <a href="../BooksHub.github.io/BooksHub-HtmlFiles/contact.html" target="_blank">
-            <span class="actual-text">&nbsp;contact&nbsp;</span>
-            <span class="hover-text">&nbsp;contact&nbsp;</span>
-          </a>
-        </li>
-        <li class="button">
-          <a href="../BooksHub.github.io/BooksHub-HtmlFiles/about.html" target="_blank">
-            <span class="actual-text">&nbsp;about&nbsp;</span>
-            <span class="hover-text">&nbsp;about&nbsp;</span>
-          </a>
-        </li>
-        <li class="button">
-          <a href="../BooksHub.github.io/BooksHub-HtmlFiles/donatetion.html" target="_blank">
-            <span class="actual-text">&nbsp;Donate&nbsp;</span>
-            <span class="hover-text">&nbsp;Donate&nbsp;</span>
-          </a>
-        </li>
+      <button class="menu-toggle">
+       <img src="../BooksHub.github.io/Toggle-removebg-preview.png">
+      </button>
+      <ul class="nav-links">
+        <li><a href="../BooksHub.github.io/index.html">Home</a></li>
+        <li><a href="../BooksHub.github.io/BooksHub-HtmlFiles/books.html" target="_blank">Books</a></li>
+        <li><a href="../BooksHub.github.io/BooksHub-HtmlFiles/contact.html" target="_blank">Contact</a></li>
+        <li><a href="../BooksHub.github.io/BooksHub-HtmlFiles/about.html" target="_blank">About</a></li>
+        <li><a href="../BooksHub.github.io/BooksHub-HtmlFiles/donatetion.html" target="_blank">Donate</a></li>
       </ul>
       <a href="https://forms.gle/7HaYL5PqKcEMPyv6A" target="_blank" class="E-BookSub">Submit Your E-Book</a>
-    </div>
+    </nav>
+    
 
     <!--Banner-->
     <div class="banner">
@@ -86,7 +67,7 @@
       </div>
     </div>
 
-    <img src="../BooksHub.github.io/Images/backwebimg.jpeg" class="mainbackimg" />
+    <!-- <img src="../BooksHub.github.io/Images/backwebimg.jpeg" class="mainbackimg"/> -->
 
     <div>
       <p class="intro">
