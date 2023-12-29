@@ -7,7 +7,6 @@
     <title>Books Hub</title>
     <link rel="shortcut icon" href="../BooksHub.github.io/Images/SiteLogo.svg" type="image/x-icon"/>
     <link rel="stylesheet" href="../BooksHub.github.io/BooksHub/CSS/Books_Hub.css"/>
-    <!-- <link rel="stylesheet" media="screen and (max-width: 400px)" href="../BooksHub.github.io/BooksHub/CSS/HubPhone.css"> -->
   </head>
   <body>
        
@@ -26,7 +25,7 @@
         </a>
       </div>
       <button class="menu-toggle">
-       <img src="../BooksHub.github.io/Toggle-removebg-preview.png">
+       <img src="../BooksHub.github.io/Images/Toggle.svg">
       </button>
       <ul class="nav-links">
         <li><a href="../BooksHub.github.io/index.html">Home</a></li>
@@ -40,36 +39,51 @@
     
 
     <!--Banner-->
-    <div class="banner">
-      <div class="slides">
-        <div class="slide">
-          <img src="../BooksHub.github.io/BannerImg/Banner1.svg" />
-        </div>
-        <div class="slide">
-          <img src="../BooksHub.github.io/BannerImg/Banner2.svg" />
-        </div>
-        <div class="slide">
-          <img src="../BooksHub.github.io/BannerImg/Banner3.svg" />
-        </div>
-        <div class="slide">
-          <img src="../BooksHub.github.io/BannerImg/Banner4.svg" />
-        </div>
-        <div class="slide">
-          <img src="../BooksHub.github.io/BannerImg/Banner5.svg" />
-        </div>
+    <div class="slideshow-container">
+
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="../BooksHub.github.io/BannerImg/Banner1.svg" style="width:100%">
       </div>
-      <div class="slider-nav">
-        <label for="slide-1"></label>
-        <label for="slide-2"></label>
-        <label for="slide-3"></label>
-        <label for="slide-4"></label>
-        <label for="slide-5"></label>
+    
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="../BooksHub.github.io/BannerImg/Banner2.svg" style="width:100%">
       </div>
+    
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="../BooksHub.github.io/BannerImg/Banner3.svg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../BooksHub.github.io/BannerImg/Banner4.svg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../BooksHub.github.io/BannerImg/Banner5.svg" style="width:100%">
+        </div>
+    
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)" style="display: flex;position: relative;top: -110px;color: transparent;">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)" style="display: flex;position: relative;top: -110px;color: transparent;">&#10095;</a>
+    </div>
+    <br>
+    
+    <!-- The dots/circles -->
+    <div style="display: flex;position: relative;justify-content: center;top: -80px;">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
     </div>
 
-    <!-- <img src="../BooksHub.github.io/Images/backwebimg.jpeg" class="mainbackimg"/> -->
 
-    <div>
+    <div id="HomeText">
       <p class="intro">
         Welcome to <span class="introtext"> Books Hub</span>, the digital
         sanctuary where
