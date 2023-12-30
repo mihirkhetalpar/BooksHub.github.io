@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>BOOKS</title>
     <link rel="shortcut icon" href="../Images/SiteLogo.svg" type="image/x-icon"/>
     <link rel="stylesheet" href="../BooksHub/CSS/Books_Hub.css"/>
@@ -17,50 +18,24 @@
       <!-- SCROLL INDICATOR -->
       <div class="scroll-indicator"></div> 
 
-  <div class="navbar">
-    <div id="logo">
-      <a href="../index.html">
-        <img src="../Images/SiteLogo.svg" alt="navlog"/>
-      </a>
-    </div>
-    <ul id="navLinks">
-      <li class="button">
-        <a href="../index.html" target="_blank">
-          <span class="actual-text">&nbsp;home&nbsp;</span>
-          <span class="hover-text">&nbsp;home&nbsp;</span>
-        </a>
-      </li>
-      <li class="button">
-        <a href="../BooksHub-HtmlFiles/books.html">
-          <span class="actual-text">&nbsp;books&nbsp;</span>
-          <span class="hover-text">&nbsp;books&nbsp;</span>
-        </a>
-      </li>
-      <li class="button">
-        <a href="../BooksHub-HtmlFiles/contact.html" target="_blank">
-          <span class="actual-text">&nbsp;contact&nbsp;</span>
-          <span class="hover-text">&nbsp;contact&nbsp;</span>
-        </a>
-      </li>
-      <li class="button">
-        <a href="../BooksHub-HtmlFiles/about.html" target="_blank">
-          <span class="actual-text">&nbsp;about&nbsp;</span>
-          <span class="hover-text">&nbsp;about&nbsp;</span>
-        </a>
-      </li>
-      <li class="button">
-        <a href="../BooksHub-HtmlFiles/donatetion.html" target="_blank">
-          <span class="actual-text">&nbsp;Donate&nbsp;</span>
-          <span class="hover-text">&nbsp;Donate&nbsp;</span>
-        </a>
-      </li>
-    </ul>
-    <a href="https://forms.gle/7HaYL5PqKcEMPyv6A" target="_blank" class="E-BookSub">Submit Your E-Book</a>
-  </div>
-
-  <div id="bookbackimg">
-    <img src="../Images/books-hub.png" alt="">
-  </div>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="../index.html">
+            <img src="../Images/SiteLogo.svg" alt="navlog"/>
+          </a>
+        </div>
+        <button class="menu-toggle">
+        <img src="../Images/Toggle.svg">
+        </button>
+        <ul class="nav-links">
+          <li><a href="../index.html" target="_blank">Home</a></li>
+          <li><a href="../BooksHub-HtmlFiles/books.html">Books</a></li>
+          <li><a href="../BooksHub-HtmlFiles/contact.html" target="_blank">Contact</a></li>
+          <li><a href="../BooksHub-HtmlFiles/about.html" target="_blank">About</a></li>
+          <li><a href="../BooksHub-HtmlFiles/donatetion.html" target="_blank">Donate</a></li>
+        </ul>
+        <a href="https://forms.gle/7HaYL5PqKcEMPyv6A" target="_blank" class="E-BookSub">Submit Your E-Book</a>
+      </nav>
  
     <p id="BookHead">Book Categories</p>
 
@@ -120,7 +95,7 @@
              <img src="../CategoryImages/Science.jpg" alt="Science"/>
            </div>
            <div class="category-summary">
-             <h1>Science</h1>
+             <h1><span class="Sci">Science</span></h1>
              <p>Embark on a fascinating journey through the realms of scientific exploration. Delve into the mysteries of the universe, study the natural world, and uncover the wonders of technology, physics, biology, astronomy, and more.</p>
            </div>      
        </a>
@@ -130,7 +105,7 @@
              <img src="../CategoryImages/Romance.jpg" alt="Romance"/>
            </div>
            <div class="category-summary">
-             <h1>Romance</h1>
+             <h1><span class="Rom">Romance</span></h1>
              <p>Indulge in heartwarming tales of love, passion, and emotional connections. Explore diverse narratives, captivating relationships, and romantic escapades within the world of romantic literature.</p>
          </div>    
        </a>
@@ -140,7 +115,7 @@
              <img src="../CategoryImages/Fantasy.png" alt="Fantasy"/>
            </div>
            <div class="category-summary">
-             <h1>Fantasy</h1>
+             <h1><span class="Fan">Fantasy</span></h1>
              <p>Embark on fantastical journeys to magical realms, mythical creatures, and epic adventures. Delve into stories of enchantment, heroes, and supernatural wonders within the imaginative world of fantasy literature.</p>
          </div>    
        </a>
@@ -150,7 +125,7 @@
              <img src="../CategoryImages/Mystery.png" alt="Mystery"/>
            </div>
            <div class="category-summary">
-             <h1>Mystery</h1>
+             <h1><span class="Mys">Mystery</span></h1>
              <p>Unravel thrilling enigmas, solve puzzles, and explore the suspenseful world of mysteries. Engage in tales of detectives, crime-solving, and unexpected twists within the captivating genre of mystery.</p>
          </div>    
        </a>
