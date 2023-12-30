@@ -7,11 +7,11 @@ Welcome to BooksHub, your go-to platform for exploring a diverse collection of b
 
 ## Note on Screen Size
 
-BooksHub is optimized for larger screens, such as laptops and desktops, to provide the best reading and browsing experience. For optimal usage and readability, we recommend accessing the website on larger screens. 
+BooksHub is designed to provide an optimal reading and browsing experience across various devices, including laptops, desktops, and mobiles. While the website is accessible on smaller screens, for the best usage and readability, we recommend accessing it on larger screens such as laptops and desktops.
 
-Please note that the website may not display correctly or offer the intended experience on smaller mobile screens.
+Please note that while the website is responsive and accessible on mobile devices, the experience may vary, and it might not offer the intended immersive experience found on larger screens.
 
-Thank you for your understanding, and we hope you enjoy exploring BooksHub on a larger screen for an immersive reading experience!
+Thank you for your understanding, and we hope you enjoy exploring BooksHub, particularly on larger screens, for an enhanced reading experience!
 
 ## Features
 
