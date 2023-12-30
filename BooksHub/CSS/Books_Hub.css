@@ -1114,17 +1114,27 @@ body::-webkit-scrollbar {
   font-family: system-ui;
   font-style: italic;
   font-size: 60px;
-  color: rgb(0 255 254 / 62%);
-  -webkit-text-stroke: 2px rgb(249 96 209);
+  color: rgb(255 255 255);
+  -webkit-text-stroke: 2px rgb(255 0 188);
   margin: 0;
   padding: 0;
 }
 
-#contactbackimg {
-  height: 100%;
-  width: 100vw;
-  filter: hue-rotate(100deg);
-  background-position: center;
+@media (max-width:400px) {
+  .contaxt {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    font-weight: 900;
+    font-family: system-ui;
+    font-style: italic;
+    font-size: 60px;
+    color: rgb(255 255 255);
+    -webkit-text-stroke: 2px rgb(255 0 188);
+    margin: 0;
+    padding: 0;
+  }
 }
 
 form {
@@ -1178,6 +1188,61 @@ input[type="text"] {
   text-transform: capitalize;
 }
 
+@media (max-width:400px) {
+  form {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: 180px;
+    left: 20px;
+    width: 350px;
+  }
+  
+  label[for="fname"] {
+    display: flex;
+    position: absolute;
+    top: -10px;
+    left: 0px;
+  }
+  
+  label[for="lname"] {
+    display: flex;
+    position: absolute;
+    top: 45px;
+    left: 0px;
+  }
+  
+  label[for="email"] {
+    display: flex;
+    position: absolute;
+    top: 95px;
+    left: 0px;
+  }
+  
+  label[for="message"] {
+    display: flex;
+    position: absolute;
+    top: 143px;
+    left: 0px;
+  }
+  
+  input[type="text"] {
+    border: 5px solid rgb(255 0 183 / 62%);
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    height: 28px;
+    font-weight: 900;
+    font-size: 14px;
+    font-family: system-ui;
+    font-style: italic;
+    background-color: rgb(0 255 243 / 34%);
+    padding-left: 6px;
+    color: #ffffff;
+    text-transform: capitalize;
+  }
+  
+}
+
 input#email {
   text-transform: lowercase;
 }
@@ -1228,6 +1293,22 @@ input[type="text"]:active {
   border-top-right-radius: 50px;
 }
 
+@media (max-width:400px) {
+  .contactglass{
+    display: flex;
+    position: relative;
+    height: 370px;
+    width: 370px;
+    top: 140px;
+    left: 10px;
+    background-color: rgb(0 0 0 / 10%);
+    backdrop-filter: blur(100px);
+    border: 3px solid rgb(255 255 255);
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+  }
+}
+
 select {
   position: relative;
   width: 120px;
@@ -1263,6 +1344,45 @@ select {
   cursor: pointer;
   justify-content: center;
   padding: 0px;
+}
+
+@media (max-width:400px) {
+  select {
+    position: relative;
+    width: 120px;
+    left: 60px;
+    top: -8px;
+    font-family: system-ui;
+    font-weight: 900;
+    font-style: italic;
+    border: 5px solid rgb(255 0 183 / 62%);
+    background-color: rgb(0 255 243 / 34%);
+    color: rgb(0, 0, 0);
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+  }
+  
+  .Sub-button {
+    display: flex;
+    position: absolute;
+    font-family: system-ui;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 20px;
+    top: 282px;
+    left: 230px;
+    height: 40px;
+    width: 80px;
+    border: 5px solid rgb(255 0 183 / 62%);
+    background-color: rgb(0 255 243 / 34%);
+    color: rgb(0, 0, 0);
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    cursor: pointer;
+    justify-content: center;
+    padding: 0px;
+  }
 }
 
 #message {
