@@ -8,7 +8,6 @@ body {
 
 body::-webkit-scrollbar {
   width: 0;
-  /* Hide scrollbar on Chrome/Safari */
 }
 
 /* ANIMATED BACKGROUND */
@@ -435,8 +434,13 @@ body::-webkit-scrollbar {
     width: 95px;
     padding: 0;
     margin: 0;
-    background-color: black;
-    border-bottom-left-radius: 25px;
+    background: rgba(232, 131, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(128, 0, 255, 0.37);
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 10px;
+    border-left: 2px solid rgba( 255, 255, 255, 0.18 );
+    border-bottom: 2px solid rgba( 255, 255, 255, 0.18 );
   }
 
   .nav-links li {
@@ -915,6 +919,7 @@ body::-webkit-scrollbar {
   background-color: red;
   width: 275px;
   height: 350px;
+  object-fit: cover;
   transform: translateZ(30px);
   background-color: #01060f;
   border-radius: 0 5px 5px 0;
@@ -1632,23 +1637,11 @@ select {
 
 /* About Us */
 
-#aboutimg {
-  display: flex;
-  position: fixed;
-  height: 100vh;
-  width: 1536px;
-  top: 0px;
-  filter: brightness(0.5);
-  z-index: -1;
-}
-
 #aboutus {
   display: flex;
   position: absolute;
   font-family: system-ui;
   font-style: italic;
-  height: 104%;
-  width: 100.71%;
 }
 
 .aboutext {
@@ -1656,30 +1649,64 @@ select {
   position: absolute;
   font-size: 120px;
   font-weight: 900;
-  -webkit-text-stroke: 5px #00f8ff;
+  color: #d0a2ff;
+  -webkit-text-stroke: 5px rgb(33 7 69);
+  filter: drop-shadow(2px 2px 6px rgb(191, 191, 191));
   top: 30px;
   left: 490px;
   padding: 0px;
   margin: 0px;
+  width: max-content;
+}
+
+@media (max-width:400px) {
+  .aboutext {
+    display: flex;
+    position: absolute;
+    font-size: 60px;
+    font-weight: 900;
+    -webkit-text-stroke: 3px rgb(33 7 69);
+    top: 60px;
+    left: 80px;
+    padding: 0px;
+    margin: 0px;
+    width: max-content;
+  }
 }
 
 .aboutusp1 {
   display: flex;
   position: absolute;
+  font-family: cursive;
+  font-style: italic;
+  font-weight: 900;
   height: 100vh;
+  width: 100vw;
 }
 
 .insideabotext1 {
   display: flex;
   position: relative;
-  font-weight: 900;
   font-size: 30px;
   top: 130px;
   left: 118px;
-  -webkit-text-stroke: 1px white;
+  color: #d0a2ff;
   padding: 50px;
   margin: 0px;
   width: 80%;
+}
+
+@media (max-width:400px) {
+  .insideabotext1 {
+    display: flex;
+    position: relative;
+    font-size: 30px;
+    top: 110px;
+    left: 5px;
+    padding: 20px;
+    margin: 0px;
+    width: 350px;
+  }
 }
 
 .backmission {
@@ -1687,18 +1714,43 @@ select {
   position: absolute;
   top: 755px;
   font-weight: 900;
-  font-size: 60px;
-  left: 390px;
+  font-family: serif;
+  font-size: 100px;
+  left: 285px;
   padding: 0px;
   margin: 0px;
-  -webkit-text-stroke: 1px white;
+  color: #d0a2ff;
+  -webkit-text-stroke: 2px rgb(33 7 69);
+  filter: drop-shadow(2px 2px 6px rgb(191, 191, 191));
+  width: max-content;
+}
+
+@media (max-width:400px) {
+  .backmission {
+    display: flex;
+    position: absolute;
+    top: 1500px;
+    font-weight: 900;
+    font-size: 40px;
+    left: 35px;
+    padding: 20px;
+    margin: 0px;
+    -webkit-text-stroke: 1px white;
+    width: 290px;
+    text-align: center;
+  }
 }
 
 .aboutusp2 {
   display: flex;
   position: absolute;
-  top: 605px;
+  font-family: cursive;
+  font-style: italic;
+  font-weight: 900;
+  top: 620px;
+  left: 50px;
   height: 100vh;
+  width: 100vw;
 }
 
 .insideabotext2 {
@@ -1707,11 +1759,24 @@ select {
   font-weight: 900;
   font-size: 31px;
   top: 175px;
-  -webkit-text-stroke: 1px white;
+  color: #fe65ff;
   margin: 0px;
   width: 80%;
   padding: 80px;
   left: 50px;
+}
+
+@media (max-width:400px) {
+  .insideabotext2 {
+    display: flex;
+    position: relative;
+    font-size: 30px;
+    top: 1000px;
+    left: -45px;
+    padding: 20px;
+    margin: 0px;
+    width: 350px;
+  }
 }
 
 .teamember {
@@ -1720,16 +1785,22 @@ select {
   top: 1400px;
   font-size: 90px;
   font-weight: 900;
-  -webkit-text-stroke: 5px white;
-  left: 400px;
-  color: #ff4b91;
+  color: #d0a2ff;
+  -webkit-text-stroke: 5px rgb(33 7 69);
+  filter: drop-shadow(2px 2px 6px rgb(191, 191, 191));
+  left: 420px;
+  width: max-content;
 }
 
 .aboutusp3 {
   display: flex;
   position: absolute;
+  font-family: cursive;
+  font-style: italic;
+  font-weight: 900;
   height: 100vh;
   top: 1500px;
+  width: 100vw;
 }
 
 .insideabotext3 {
@@ -1741,7 +1812,35 @@ select {
   font-size: 39px;
   left: 125px;
   width: 85%;
-  -webkit-text-stroke: 1px cyan;
+  color: #fe65ff;
+}
+
+@media (max-width:400px) {
+  .teamember {
+    display: flex;
+    position: absolute;
+    top: 2970px;
+    font-size: 50px;
+    font-weight: 900;
+    color: #d0a2ff;
+    -webkit-text-stroke: 2px rgb(33 7 69);
+    filter: drop-shadow(2px 2px 6px rgb(191, 191, 191));
+    left: 100px;
+    width: 0px;
+    text-align: center;
+  }
+  
+  .insideabotext3 {
+    display: flex;
+    position: relative;
+    top: 1610px;
+    height: 30px;
+    font-weight: 700;
+    font-size: 30px;
+    left: 10px;
+    width: max-content;
+    color: #fe65ff;
+  }
 }
 
 #contributor1 {
@@ -1770,16 +1869,16 @@ select {
 }
 
 #typewriter1 h1 {
-  font-family: serif;
+  font-family: system-ui;
   font-weight: 900;
   font-style: italic;
   font-size: 60px;
-  color: cyan;
-  filter: drop-shadow(3px 3px 6px white);
-  -webkit-text-stroke: 2px white;
+  color: #fe65ff;
+  -webkit-text-stroke: 2px rgb(33 7 69);
+  filter: drop-shadow(2px 2px 6px rgb(191, 191, 191));
   overflow: hidden;
   white-space: nowrap;
-  border-right: 5px solid cyan;
+  border-right: 5px solid rgb(208, 162, 255);
   animation: typewriter 5s steps(100) infinite alternate;
 }
 
@@ -1796,12 +1895,12 @@ select {
   font-weight: 900;
   font-style: italic;
   font-size: 60px;
-  color: cyan;
-  filter: drop-shadow(3px 3px 6px white);
-  -webkit-text-stroke: 2px white;
+  color: #fe65ff;
+  -webkit-text-stroke: 2px rgb(33 7 69);
+  filter: drop-shadow(2px 2px 6px rgb(191, 191, 191));
   overflow: hidden;
   white-space: nowrap;
-  border-right: 5px solid cyan;
+  border-right: 5px solid rgb(208, 162, 255);
   animation: typewriter 3s steps(100) infinite alternate;
 }
 
@@ -1818,13 +1917,94 @@ select {
   font-weight: 900;
   font-style: italic;
   font-size: 60px;
-  color: cyan;
-  filter: drop-shadow(3px 3px 6px white);
-  -webkit-text-stroke: 2px white;
+  color: #fe65ff;
+  -webkit-text-stroke: 2px rgb(33 7 69);
+  filter: drop-shadow(2px 2px 6px rgb(191, 191, 191));
   overflow: hidden;
   white-space: nowrap;
-  border-right: 5px solid cyan;
+  border-right: 5px solid rgb(208, 162, 255);
   animation: typewriter 5s steps(100) infinite alternate;
+}
+
+@media (max-width:400px) {
+  #contributor1 {
+    display: flex;
+    position: absolute;
+    top: 1750px;
+    left: 20px;
+  }
+  
+  .box1 {
+    position: absolute;
+    height: 1000px;
+    width: 350px;
+    top: 12px;
+    border: 5px solid red;
+    border: none;
+    border-radius: 200px;
+    background-image: url(../CSS/Polygon\ Luminary.svg);
+    background: none;
+  }
+  
+  #typewriter1 {
+    display: flex;
+    position: absolute;
+    top: 350px;
+    left: 55px;
+    width: max-content;
+  }
+  
+  #typewriter1 h1 {
+    font-family: serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    -webkit-text-stroke: 1px rgb(33 7 69);
+    filter: drop-shadow(2px 2px 6px rgb(191, 191, 191));
+    animation: typewriter 5s steps(100) infinite alternate;
+  }
+  
+  #typewriter2 {
+    display: flex;
+    position: absolute;
+    top: 360px;
+    left: 115px;
+    width: max-content;
+  }
+  
+  #typewriter2 h1 {
+    font-family: serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 30px;
+    -webkit-text-stroke: 1px rgb(33 7 69);
+    filter: drop-shadow(2px 2px 6px rgb(191, 191, 191));
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typewriter 3s steps(100) infinite alternate;
+  }
+  
+  #typewriter3 {
+    display: flex;
+    position: absolute;
+    top: 355px;
+    left: 40px;
+    width: max-content;
+  }
+  
+  #typewriter3 h1 {
+    font-family: serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 30px;
+    -webkit-text-stroke: 1px rgb(33 7 69);
+    filter: drop-shadow(2px 2px 6px rgb(191, 191, 191));
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typewriter 5s steps(100) infinite alternate;
+  }  
 }
 
 @keyframes typewriter {
@@ -1837,15 +2017,30 @@ select {
   }
 }
 
-.contritext1 {
+.contritext1{
   position: absolute;
   top: 90px;
-  width: 610px;
-  left: 355px;
+  width: 600px;
+  left: 340px;
   font-size: 35px;
   font-weight: 900;
-  color: rgb(255, 255, 255);
-  -webkit-text-stroke: 2px black;
+  color: #d0a2ff;
+  -webkit-text-stroke: 1px rgb(33 7 69);
+  filter: drop-shadow(2px 2px 6px rgb(191, 191, 191));
+}
+
+@media (max-width:400px) {
+  .contritext1 {
+    position: absolute;
+    top: 370px;
+    width: 350px;
+    left: 5px;
+    font-size: 45px;
+    font-weight: 900;
+    color: #d0a2ff;
+    -webkit-text-stroke: 1px rgb(33 7 69);
+    filter: drop-shadow(2px 2px 6px rgb(191, 191, 191));
+  } 
 }
 
 .card1 {
@@ -1965,7 +2160,6 @@ select {
   transform: translate3d(5px, -30%, 350px);
 }
 
-
 #contributor2 {
   display: flex;
   position: absolute;
@@ -1980,6 +2174,24 @@ select {
   border: 5px solid red;
   border-radius: 200px;
   background: url(../CSS/Icon\ Grid.svg);
+}
+
+@media (max-width:400px) {
+  #contributor2 {
+    display: flex;
+    position: absolute;
+    top: 2650px;
+    left: 20px;
+  }
+  
+  .box2 {
+    position: absolute;
+    height: 1000px;
+    width: 250px;
+    top: 32px;
+    border: none;
+    background: none;
+  }
 }
 
 .contrimg3 {
@@ -2003,8 +2215,23 @@ select {
   left: 355px;
   font-size: 31px;
   font-weight: 900;
-  color: rgb(255, 255, 255);
-  -webkit-text-stroke: 2px black;
+  color: #d0a2ff;
+  -webkit-text-stroke: 1px rgb(33 7 69);
+  filter: drop-shadow(2px 2px 6px rgb(191, 191, 191));
+}
+
+@media (max-width:400px) {
+  .contritext2 {
+    position: absolute;
+    top: 380px;
+    width: 350px;
+    left: 5px;
+    font-size: 45px;
+    font-weight: 900;
+    color: #d0a2ff;
+    -webkit-text-stroke: 1px rgb(33 7 69);
+    filter: drop-shadow(2px 2px 6px rgb(191, 191, 191));
+  }
 }
 
 .card2 {
@@ -2140,6 +2367,24 @@ select {
   background: url(../CSS/Contour\ Line.svg);
 }
 
+@media (max-width:400px) {
+  #contributor3 {
+    display: flex;
+    position: absolute;
+    top: 3710px;
+    left: 20px;
+  }
+  
+  .box3 {
+    position: absolute;
+    height: 1000px;
+    width: 350px;
+    top: 32px;
+    background: none;
+    border: none;
+  }
+}
+
 .contrimg5 {
   position: absolute;
   top: 50px;
@@ -2159,8 +2404,23 @@ select {
   left: 355px;
   font-size: 35px;
   font-weight: 900;
-  color: rgb(255, 255, 255);
-  -webkit-text-stroke: 2px black;
+  color: #d0a2ff;
+  -webkit-text-stroke: 1px rgb(33 7 69);
+  filter: drop-shadow(2px 2px 6px rgb(191, 191, 191));
+}
+
+@media (max-width:400px) {
+  .contritext3 {
+    position: absolute;
+    top: 380px;
+    width: 350px;
+    left: 10px;
+    font-size: 45px;
+    font-weight: 900;
+    color: #d0a2ff;
+    -webkit-text-stroke: 1px rgb(33 7 69);
+    filter: drop-shadow(2px 2px 6px rgb(191, 191, 191));
+  }
 }
 
 .card3 {
