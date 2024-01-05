@@ -2559,13 +2559,13 @@ select {
 
 .donation-content h1 {
   position: absolute;
-  left: 645px;
-  width: 250px;
-  top: 20px;
-  color: aqua;
-  -webkit-text-stroke: 1px white;
+  left: 620px;
+  width: max-content;
+  top: 5px;
+  -webkit-text-stroke: 1px rgb(33 7 69);
+  color: #d0a2ff;
   filter: drop-shadow(0px 0px 4px white);
-  font-size: 50px;
+  font-size: 60px;
 }
 
 #donatetext {
@@ -2573,13 +2573,35 @@ select {
   position: absolute;
   top: 430px;
   padding: 25px;
-  font-family: sans-serif;
+  font-family: cursive;
   font-weight: 800;
   font-size: 30px;
   font-style: italic;
-  color: aqua;
+  color: #fe65ff;
   z-index: 1;
-  -webkit-text-stroke: 1px rgb(0 255 243 / 54%);
+}
+
+@media (max-width:400px) {
+  .donation-content h1 {
+    position: absolute;
+    left: 55px;
+    top: 20px;
+    -webkit-text-stroke: 2px rgb(33 7 69);
+    filter: drop-shadow(0px 0px 4px white);
+    font-size: 50px;
+  }
+  
+  #donatetext {
+    display: flex;
+    position: absolute;
+    top: 430px;
+    width: 350px;
+    padding: 25px;
+    font-weight: 800;
+    font-size: 40px;
+    font-style: italic;
+    z-index: 1;
+  }
 }
 
 /* STYLE FOR FOOTER */
