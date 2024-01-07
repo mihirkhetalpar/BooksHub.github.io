@@ -291,13 +291,18 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #9b37ff;
   padding: 15px;
   position: fixed;
   top: 0;
   left: 0;
   height: 25px;
   width: 100%;
+  background: rgba(232, 131, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(128, 0, 255, 0.37);
+  backdrop-filter: blur( 20px );
+ -webkit-backdrop-filter: blur( 20px );
+ border-radius: 10px;
+ border: 2px solid rgba( 255, 255, 255, 0.18 );
   z-index: 2;
 }
 
@@ -403,7 +408,6 @@ body::-webkit-scrollbar {
 @media (max-width: 400px) {
   .navbar {
     padding: 10px;
-    background-color: #6e3e9f;
   }
 
   .logo img{
@@ -414,7 +418,7 @@ body::-webkit-scrollbar {
   .menu-toggle {
     display: flex;
     position: fixed;
-    right: 5px;
+    right: 22px;
   }
 
   .menu-toggle img {
@@ -1407,7 +1411,7 @@ input[type="text"] {
   height: 28px;
   font-weight: 900;
   font-size: 14px;
-  font-family: system-ui;
+  font-family: cursive;
   font-style: italic;
   background-color: rgb(0 255 243 / 34%);
   padding-left: 6px;
@@ -1490,7 +1494,7 @@ input[type="text"]:active {
 #message {
   border-bottom-right-radius: 20px;
   border-top-left-radius: 20px;
-  font-family: system-ui;
+  font-family: cursive;
   font-weight: 900;
   font-size: 14px;
   font-style: italic;
