@@ -2634,3 +2634,13 @@ footer {
   left: -380px;
   z-index: 15;
 }
+
+@media (max-width:400px) {
+  .commentSection{
+    display: flex;
+    position: relative;
+    top: 2750px;
+    left: 0px;
+    z-index: 15;
+  }  
+}
